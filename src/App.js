@@ -24,7 +24,7 @@ const initialFriends = [
   },
 ];
 export default function App(){
-  const [friends, setFriends] = useState(initialFriends)
+  const [friends, setFriends] = useState([])
 
   const [displayFriendForm, setDisplayFriendForm] = useState(false)
   const [displayBillForm, setBillForm] = useState(false)

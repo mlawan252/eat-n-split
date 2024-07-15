@@ -8,7 +8,8 @@ export default function AddFriendForm({displayFriendForm, onSetFriends}){
     
     function addNewFriend(e){
         e.preventDefault()
-        onSetFriends(prevFriends=>[...prevFriends,{name:name,image:image, id:Date.now, balance:null}])
+        if(!name || !image)return
+        onSetFriends(prevFriends=>[...prevFriends,{name:name,image:image, id:Date.now(), balance:null}])
         setName('')
         setImage('')
     }
