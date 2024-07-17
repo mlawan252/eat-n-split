@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 
-export default function AddFriendForm({displayFriendForm, onSetFriends}){
+export default function AddFriendForm({ onSetFriends}){
     const [name, setName] = useState("")
     const [image, setImage] = useState("")
     
@@ -14,8 +14,8 @@ export default function AddFriendForm({displayFriendForm, onSetFriends}){
         setImage('')
     }
     return(
-      <>
-      {displayFriendForm && <form className="form-add-friend" onSubmit={addNewFriend}>
+      
+      <form className="form-add-friend" onSubmit={addNewFriend}>
         <label>🧑🏻‍🤝‍🧑🏿Friend Name</label>
         <input type="text" onChange={(e)=>setName(e.target.value)} value={name}/>
  
@@ -23,8 +23,8 @@ export default function AddFriendForm({displayFriendForm, onSetFriends}){
         <input type="text" onChange={(e)=>setImage(e.target.value)} value={image} />
  
         <Button>Add</Button>
-       </form>}  
-      </>
+       </form>
+      
         
       
     )
